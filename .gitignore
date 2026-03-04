@@ -1,0 +1,9 @@
+BRIEF.MD
+brief.md
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor/project-local noise
+.cursor/

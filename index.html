@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BRAP.FUN</title>
+    <meta
+      name="description"
+      content="Brap.fun static shell: tactile tech-zen interface for functional extensions."
+    >
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <div class="paper-noise" aria-hidden="true"></div>
+    <a class="skip-link" href="#experiment-frame">Skip to experiment frame</a>
+
+    <main class="shell" aria-label="Brap shell interface">
+      <aside class="meta-rail" aria-label="Metadata rail">
+        <p class="meta-kicker">BIG::SWAG::MODE</p>
+        <nav class="coordinate-nav" aria-label="Coordinate navigation">
+          <button class="coord is-active" data-panel="alpha">01 / ALPHA</button>
+          <button class="coord" data-panel="beta">02 / BETA</button>
+          <button class="coord" data-panel="gamma">03 / GAMMA</button>
+        </nav>
+        <p class="meta-stack">
+          SWAMP_GAS_<br>
+          LAT 35.6764N<br>
+          LON 139.6500E<br>
+          CLOCK 00:00:00
+        </p>
+      </aside>
+
+      <section class="control-layer" aria-label="Control layer">
+        <header class="title-block">
+          <h1>BRAP</h1>
+          <p>.FUN</p>
+        </header>
+
+        <article class="experiment-console" aria-label="Experiment console">
+          <div class="window-chrome" aria-hidden="true">
+            <span class="dot dot-close"></span>
+            <span class="dot dot-min"></span>
+            <span class="dot dot-max"></span>
+          </div>
+          <div class="bevel-frame panel-enter" id="experiment-frame" tabindex="0">
+            <div class="frame-grid"></div>
+            <section class="sim-shell" id="sim-shell" aria-label="Cell sandbox experiment">
+              <div class="sim-toolbar" role="toolbar" aria-label="God tools">
+                <button class="tool-icon is-active" data-tool="food" title="Drop food field" aria-label="Drop food field">
+                  <img src="./assets/icons/tool-food.svg" alt="">
+                </button>
+                <button class="tool-icon" data-tool="hazard" title="Place hazard pulse" aria-label="Place hazard pulse">
+                  <img src="./assets/icons/tool-hazard.svg" alt="">
+                </button>
+                <button class="tool-icon" data-tool="fertility" title="Create fertility zone" aria-label="Create fertility zone">
+                  <img src="./assets/icons/tool-fertility.svg" alt="">
+                </button>
+                <button class="tool-icon" data-tool="mutation" title="Trigger mutation catalyst" aria-label="Trigger mutation catalyst">
+                  <img src="./assets/icons/tool-mutation.svg" alt="">
+                </button>
+                <button class="tool-icon" data-tool="cull" title="Cull target cell" aria-label="Cull target cell">
+                  <img src="./assets/icons/tool-cull.svg" alt="">
+                </button>
+                <button class="tool-icon" data-tool="swarm" title="Release short-lived locust swarm" aria-label="Release short-lived locust swarm">
+                  <img src="./assets/icons/tool-swarm.svg" alt="">
+                </button>
+                <button class="tool-icon" data-tool="spawnMutant" title="Spawn a large mutant hunter cell" aria-label="Spawn a large mutant hunter cell">
+                  <img src="./assets/icons/tool-spawn-mutant.svg" alt="">
+                </button>
+                <button class="tool-icon" data-tool="buildWall" title="Draw collision walls (right click erases)" aria-label="Draw collision walls (right click erases)">
+                  <img src="./assets/icons/tool-wall.svg" alt="">
+                </button>
+              </div>
+              <canvas
+                id="sim-canvas"
+                class="sim-canvas"
+                width="640"
+                height="360"
+                aria-label="Autonomous cell ecosystem simulation"
+              ></canvas>
+              <button
+                id="utopia-toggle"
+                class="utopia-toggle is-on"
+                type="button"
+                aria-pressed="true"
+                aria-label="Toggle utopia mode"
+                title="Utopia mode"
+              >
+                <img src="./assets/icons/toggle-utopia.svg" alt="">
+              </button>
+              <div id="sim-tooltip" class="sim-tooltip" hidden></div>
+              <div class="sim-hud" aria-live="polite">
+                <span id="hud-pop">POP 000</span>
+                <span id="hud-food">FOOD 000</span>
+                <span id="hud-events">EVENT none</span>
+              </div>
+              <p class="sim-tool-status" id="sim-tool-status">TOOL food</p>
+            </section>
+            <p class="placeholder-label is-hidden" id="placeholder-label" aria-live="polite">
+              EXPERIMENT SLOT / STATIC PLACEHOLDER
+            </p>
+          </div>
+        </article>
+
+        <aside class="tech-strip" aria-label="Technical data">
+          <p>RIG: SIMULATION</p>
+          <p>MODE: MANIPULATE</p>
+          <p id="panel-state">STATE: READY_FOR_CANVAS_OR_IFRAME</p>
+          <button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="false">
+            SOUND OFF
+          </button>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="identity">
+      <small>BRAP.FUN / SL1M3_SOULJ4H / LOPS1DE</small>
+    </footer>
+
+    <script src="./scripts/sim-core.js"></script>
+    <script src="./scripts/sim-tools.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
